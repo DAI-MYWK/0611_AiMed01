@@ -1,0 +1,88 @@
+global_header:
+  markup: "HTML5 (<header> + Flexbox)"
+  style: "CSS Modules / SCSS, position: fixed"
+  javascript: ["React", "Next.js Link"]
+  images_icons: ["SVG ロゴ", "Font Awesome"]
+  layout: "Flex row, mobile collapses to hamburger"
+  fonts: ["MyFonts カスタム英字", "Google Font API (Noto Sans JP)"]
+
+hero_app_download:
+  background:
+    image: "pattern.svg"
+    css: "background-size: cover; ::before に RGBA(0,0,0,0.35)"
+  main_visual:
+    file: "iphone_mock.png"
+    size: "約 800×1600px"
+    position: "absolute; right: 6%; bottom: 0; width: 40vw; z-index: 10"
+  text_block: "左 50%、mix-blend-mode: difference で白文字"
+  animation: ["IntersectionObserver フェードイン", "GSAP/CSS slideUp 0.6s"]
+
+pick_your_base_slider:
+  slider: "Swiper.js"
+  card_image:
+    format: "WebP"
+    size: "600×600px"
+    style: "object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.15)"
+  layout: "overflow-x: scroll; scroll-snap-type: x mandatory"
+  swiper_options: { loop: false, slidesPerView: "auto", spaceBetween: 24 }
+
+featured_salads_grid:
+  grid: "CSS Grid, repeat(auto-fit,minmax(280px,1fr))"
+  image:
+    format: "PNG (透過)"
+    size: "800×800px"
+    hover: "scale(1.05) + drop-shadow"
+  animation: "IntersectionObserver, opacity + translateY"
+
+store_locator_hero:
+  background:
+    file: "store.jpg"
+    size: "1920×1080px"
+    css: "object-position: center top"
+  overlay: "rgba(0,50,35,0.55) ::before"
+  text_position: "absolute center (Flex)"
+  cta_button: "Link /stores, hover 反転"
+
+company_recruit_banner:
+  layout: "2-column Flex, mobile vertical"
+  left_text: "背景に野菜コラージュ, background-size: contain"
+  right_banner: "clip-path: polygon(...) で斜めカット"
+  animation: "GSAP ScrollTrigger clip-path 展開"
+
+initiatives_section:
+  background:
+    file: "ingredients_flatlay.jpg"
+    size: "2400×800px"
+    css: "background-attachment: fixed"
+  text: "centered, max-width 640px"
+  button: "border 2px solid #fff, hover 反転"
+  animation: "IntersectionObserver フェードイン"
+
+newsletter_footer:
+  layout: "CSS Grid 2 columns"
+  form: "React Hook Form + Firebase Functions"
+  phone_mock:
+    file: "app_mock.png"
+    size: "300×620px"
+    position: "relative; top: -40px"
+  footer_menu: "4-column Grid"
+  colors: { background: "#003B2F", text: "#FFFFFF / #C4E6D0" }
+
+tech_stack:
+  framework: ["Next.js 14", "React 18"]
+  language: ["TypeScript", "SCSS Modules"]
+  style_animation: ["CSS Modules", "GSAP", "IntersectionObserver"]
+  slider: "Swiper.js"
+  state_management: ["React Context", "Firebase Auth"]
+  cms: "Contentful"
+  hosting_cdn: ["Firebase Hosting", "Cloudflare CDN"]
+  analytics: ["Google Analytics 4", "Google Tag Manager", "Facebook Pixel"]
+  libraries: ["jQuery", "Day.js", "Socket.IO", "matchMedia Polyfill"]
+  fonts: ["MyFonts", "Google Font API (Noto Sans JP)"]
+
+images_general:
+  png_transparency: "背景透過でブランドカラーに馴染ませる"
+  main_square: "800〜1200px, object-fit: cover"
+  mockups_zindex: "z-index: 10+, drop-shadow"
+  hero_photos: "横長 1920px+, background-position: center"
+  pattern_svg: "opacity: 0.1〜0.25, 軽量化"

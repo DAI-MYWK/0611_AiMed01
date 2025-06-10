@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFN Sensor Flow - わたしが輝く、毎日のはじまり</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="floating-header" id="header">
+      <nav class="nav-container">
+        <div class="logo-section">
+          <img src="img/logo.webp" alt="IFN Sensor Flow" class="logo" />
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home">ホーム</a></li>
+          <li><a href="#concept">コンセプト</a></li>
+          <li><a href="#product">製品情報</a></li>
+          <li><a href="#ingredients">成分</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact" class="cta-nav">お問い合わせ</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-background">
+          <div class="floating-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text-area">
+            <h1 class="hero-title">
+              <span class="title-line-1">わたしが輝く、</span>
+              <span class="title-line-2">毎日のはじまり</span>
+            </h1>
+            <p class="hero-subtitle">もっと自由に、わたしらしく。</p>
+            <p class="hero-description">
+              IFN Sensor Flowは、身体の奥底に眠る力を引き出し、<br />
+              あらゆるシーンで自分らしく輝き続けるための"はじまり"をサポートします。
+            </p>
+            <button
+              class="cta-button primary-cta"
+              onclick="scrollToSection('product')"
+            >
+              <span>製品について詳しく</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="hero-visual">
+            <div class="product-showcase">
+              <img
+                src="img/img_ifn_sensor_flow.webp"
+                alt="IFN Sensor Flow"
+                class="product-image floating-animation"
+              />
+              <div class="glow-effect"></div>
+            </div>
+            <div class="lady-visual">
+              <img
+                src="img/main_japanese-lady.png"
+                alt="輝く女性"
+                class="lady-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+          <span>スクロール</span>
+        </div>
+      </section>
+
+      <!-- Concept Section -->
+      <section id="concept" class="concept-section">
+        <div class="section-header">
+          <h2 class="section-title">コンセプト</h2>
+          <p class="section-subtitle">4つの想いから生まれた、新しい健康体験</p>
+        </div>
+
+        <div class="concept-grid">
+          <!-- Concept 1: テキスト左、画像右 -->
+          <div class="concept-card" data-aos="fade-up" data-delay="0">
+            <div class="concept-text-content">
+              <div class="concept-number">01</div>
+              <h3>わたしが輝く、毎日のはじまり</h3>
+              <p>
+                身体の奥底に眠る力を引き出し、あらゆるシーンで自分らしく輝き続けるための"はじまり"をサポートします。肌をいたわるスキンケアのように、宝石を身につけるように、あなたの人生にさりげなく寄り添います。
+              </p>
+            </div>
+            <div class="concept-visual-content">
+              <img src="img/main01.png" alt="輝く毎日" class="concept-image" />
+            </div>
+          </div>
+
+          <!-- Concept 2: テキスト右、写真左 -->
+          <div class="concept-card" data-aos="fade-up" data-delay="200">
+            <div class="concept-text-content">
+              <div class="concept-number">02</div>
+              <h3>美味しく笑う、軽やかに動く。</h3>
+              <p>
+                いつでも好きなものを、存分に味わえる幸せ。心地よい疲れを感じながら、明日もまた運動を楽しめるよろこび。人生を味わい尽くすためのエッセンスとして誕生しました。
+              </p>
+            </div>
+            <div class="concept-visual-content">
+              <img
+                src="img/lady03.png"
+                alt="美味しい時間"
+                class="concept-image"
+              />
+            </div>
+          </div>
+
+          <!-- Concept 3: テキスト左、画像右 -->
+          <div class="concept-card" data-aos="fade-up" data-delay="400">
+            <div class="concept-text-content">
+              <div class="concept-number">03</div>
+              <h3>自分史上、いちばんやさしいわたしへ</h3>
+              <p>
+                高級ジュエリーを選ぶように、上質なものを選びたい。身体が持つ本来の力を信じ、"やさしいわたし"の実現へ。心に余裕があるから、今日は誰かに優しくなれる。
+              </p>
+            </div>
+            <div class="concept-visual-content">
+              <img
+                src="img/lady04.png"
+                alt="やさしい自分"
+                class="concept-image"
+              />
+            </div>
+          </div>
+
+          <!-- Concept 4: テキスト右、写真左 -->
+          <div class="concept-card" data-aos="fade-up" data-delay="600">
+            <div class="concept-text-content">
+              <div class="concept-number">04</div>
+              <h3>輝きをまとう、新しい自分と出会う。</h3>
+              <p>
+                まるで上質なアクセサリーを身につけるかのように、毎日の暮らしを"ワンランク上のわたし"へ導く。日常のリズムが整い、心身に宿る"輝き"をサポートします。
+              </p>
+            </div>
+            <div class="concept-visual-content">
+              <img
+                src="img/lady02.png"
+                alt="新しい自分"
+                class="concept-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Section -->
+      <section id="product" class="product-section">
+        <div class="product-container">
+          <div class="product-info">
+            <div class="product-badge">Premium Supplement</div>
+            <h2 class="product-title">
+              <span class="product-name">IFN Sensor Flow</span>
+              <span class="product-subtitle">180粒入り</span>
+            </h2>
+            <div class="product-features">
+              <div class="feature-item">
+                <i class="fas fa-leaf"></i>
+                <span>5つの厳選自然素材</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>白雪茸由来βグルカン配合</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-star"></i>
+                <span>小島博士の研究基盤</span>
+              </div>
+            </div>
+            <div class="product-price">
+              <span class="price-label">定価（税別）</span>
+              <span class="price-amount">¥18,000</span>
+            </div>
+            <button class="cta-button product-cta">
+              <span>今すぐ注文する</span>
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+          </div>
+          <div class="product-visual-container">
+            <div class="product-images">
+              <img
+                src="img/img_ifn_sensor_flow.webp"
+                alt="IFN Sensor Flow メイン"
+                class="main-product-img"
+              />
+              <img
+                src="img/img_ifn_sensor_flow_01.webp"
+                alt="IFN Sensor Flow サブ1"
+                class="sub-product-img sub-img-1"
+              />
+              <img
+                src="img/img_ifn_sensor_flow_02.webp"
+                alt="IFN Sensor Flow サブ2"
+                class="sub-product-img sub-img-2"
+              />
+            </div>
+            <div class="product-glow"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ingredients Section -->
+      <section id="ingredients" class="ingredients-section">
+        <div class="ingredients-background">
+          <div class="vegetable-collage">
+            <div class="vegetable-item v1">
+              <img src="img/vegetable01.png" alt="紫ウコン" />
+            </div>
+            <div class="vegetable-item v2">
+              <img src="img/vegetable02.png" alt="南瓜種子" />
+            </div>
+            <div class="vegetable-item v3">
+              <img src="img/vegetable03.png" alt="トウモロコシ花桂" />
+            </div>
+            <div class="vegetable-item v4">
+              <img src="img/vegetable04.png" alt="桂皮" />
+            </div>
+            <div class="vegetable-item v5">
+              <img src="img/vegetable05.png" alt="ハトムギ" />
+            </div>
+            <div class="vegetable-item v6">
+              <img src="img/vegetable06.png" alt="" />
+            </div>
+            <div class="vegetable-item v7">
+              <img src="img/vegetable07.png" alt="" />
+            </div>
+            <div class="vegetable-item v8">
+              <img src="img/vegetable08.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="ingredients-content">
+          <h2 class="section-title">選び抜かれた自然の力</h2>
+          <p class="section-subtitle">5つの厳選素材と白雪茸βグルカンの調和</p>
+
+          <div class="ingredients-grid">
+            <div class="ingredient-card" data-ingredient="purple-turmeric">
+              <div class="ingredient-icon">
+                <img
+                  src="img/vegetable09.png"
+                  alt="紫ウコン"
+                  class="ingredient-img"
+                />
+              </div>
+              <h3>紫ウコン</h3>
+              <p>免疫ケアに寄与すると期待される伝統的な素材</p>
+            </div>
+
+            <div class="ingredient-card" data-ingredient="pumpkin-seed">
+              <div class="ingredient-icon">
+                <img
+                  src="img/vegetable10.png"
+                  alt="南瓜種子"
+                  class="ingredient-img"
+                />
+              </div>
+              <h3>南瓜種子</h3>
+              <p>自然の恵みを凝縮した栄養豊富な種子</p>
+            </div>
+
+            <div class="ingredient-card" data-ingredient="corn-silk">
+              <div class="ingredient-icon">
+                <img
+                  src="img/vegetable11.png"
+                  alt="トウモロコシ花桂"
+                  class="ingredient-img"
+                />
+              </div>
+              <h3>トウモロコシ花桂</h3>
+              <p>独自の抽出方法で有効成分を引き出し</p>
+            </div>
+
+            <div class="ingredient-card" data-ingredient="cinnamon">
+              <div class="ingredient-icon">
+                <img
+                  src="img/vegetable12.png"
+                  alt="桂皮"
+                  class="ingredient-img"
+                />
+              </div>
+              <h3>桂皮</h3>
+              <p>古来より愛され続ける薬用植物の力</p>
+            </div>
+
+            <div class="ingredient-card" data-ingredient="coix">
+              <div class="ingredient-icon">
+                <img
+                  src="img/vegetable13.png"
+                  alt="ハトムギ"
+                  class="ingredient-img"
+                />
+              </div>
+              <h3>ハトムギ</h3>
+              <p>美容と健康をサポートする穀物の王様</p>
+            </div>
+
+            <div
+              class="ingredient-card special-ingredient"
+              data-ingredient="white-snow-mushroom"
+            >
+              <div class="ingredient-icon special-icon">
+                <img
+                  src="img/vegetable14.png"
+                  alt="白雪茸"
+                  class="ingredient-img"
+                />
+                <div class="special-badge">Special</div>
+              </div>
+              <h3>白雪茸<span class="beta-glucan">βグルカン</span></h3>
+              <p>βグルカン含有量が高く、免疫機能をサポート</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="benefits-section">
+        <div class="benefits-container">
+          <h2 class="section-title">期待される効果</h2>
+          <div class="benefits-wrapper">
+            <div class="benefit-item" data-aos="slide-in-left">
+              <div class="benefit-icon">
+                <i class="fas fa-shield-virus"></i>
+              </div>
+              <div class="benefit-content">
+                <h3>免疫バランスの調整</h3>
+                <p>
+                  日々の生活習慣の乱れからくる免疫バランスの崩れを穏やかに整えます
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item" data-aos="slide-in-right">
+              <div class="benefit-icon">
+                <i class="fas fa-heart-pulse"></i>
+              </div>
+              <div class="benefit-content">
+                <h3>健康的な体づくり</h3>
+                <p>
+                  ウイルスや細菌などの異物に対抗できる身体づくりをサポートします
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item" data-aos="slide-in-left">
+              <div class="benefit-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <div class="benefit-content">
+                <h3>ストレス対応力向上</h3>
+                <p>ストレスや加齢による体力低下を感じている方におすすめです</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Section -->
+      <section id="company" class="company-section">
+        <div class="company-container">
+          <div class="company-info">
+            <h2 class="section-title">AiMed株式会社</h2>
+            <p class="company-mission">
+              医療と健康の未来を見据え、"本物"の医療技術やノウハウを社会に広く還元していくことを目指しています。
+            </p>
+
+            <div class="company-values">
+              <div class="value-item">
+                <div class="value-number">01</div>
+                <h3>健康の増進</h3>
+                <p>
+                  国民一人ひとりの安心と安全を、医療の側面からサポートします。
+                </p>
+              </div>
+              <div class="value-item">
+                <div class="value-number">02</div>
+                <h3>"本物"思考</h3>
+                <p>"本当に良いもの"を提供し続けることを大切に考えています。</p>
+              </div>
+              <div class="value-item">
+                <div class="value-number">03</div>
+                <h3>先端医療の推進</h3>
+                <p>次世代の医療を考え、知識や経験を社会に広く共有します。</p>
+              </div>
+            </div>
+
+            <div class="company-details">
+              <div class="detail-item">
+                <span class="detail-label">代表</span>
+                <span class="detail-value">代表取締役 木村 修</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">設立</span>
+                <span class="detail-value">2014年11月</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">資本金</span>
+                <span class="detail-value">8,000万円</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">本社</span>
+                <span class="detail-value">東京都港区白金台4丁目9-19</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="contact" class="cta-section">
+        <div class="cta-container">
+          <h2 class="cta-title">
+            あなたの健康を<br /><span class="highlight"
+              >多方面からサポート</span
+            >
+          </h2>
+          <p class="cta-description">
+            毎日の習慣に組み込むことで、免疫バランスを日常的にサポート。<br />
+            あなたの健康への投資として、ぜひご検討ください。
+          </p>
+          <div class="cta-buttons">
+            <button class="cta-button primary-cta large-cta">
+              <span>今すぐ注文する</span>
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <button class="cta-button secondary-cta large-cta">
+              <span>お問い合わせ</span>
+              <i class="fas fa-envelope"></i>
+            </button>
+          </div>
+          <div class="contact-info">
+            <p>
+              お電話でのお問い合わせ：<a href="tel:03-0000-0000"
+                >03-0000-0000</a
+              >
+            </p>
+            <p>
+              メール：<a href="mailto:info@aimed.co.jp">info@aimed.co.jp</a>
+            </p>
+          </div>
+        </div>
+        <div class="cta-visual">
+          <img
+            src="img/main_japanese-lady.png"
+            alt="健康的な女性"
+            class="cta-lady-image"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="img/logo.webp"
+              alt="IFN Sensor Flow"
+              class="footer-logo-img"
+            />
+          </div>
+          <div class="footer-info">
+            <p>&copy; 2024 AiMed株式会社. All rights reserved.</p>
+            <p>〒108-0071 東京都港区白金台4丁目9-19</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

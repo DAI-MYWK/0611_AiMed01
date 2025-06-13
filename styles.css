@@ -175,34 +175,22 @@ body {
     gap: 60px;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 50;
     height: 100vh;
 }
 
 .hero-text-area {
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideInLeft 1s ease-out 0.8s forwards;
-    padding-right: 40px;
-    text-align: left;
-}
-
-@keyframes slideInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    position: relative;
+    z-index: 100;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 900;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #2D8A8A;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .title-line-1 {
@@ -229,38 +217,24 @@ body {
 .hero-subtitle {
     font-size: 1.8rem;
     font-weight: 500;
-    color: var(--secondary-color);
-    margin-bottom: 25px;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 1.6s forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    color: #E67E22;
+    text-shadow: none;
+    mix-blend-mode: normal;
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
-    color: var(--text-light);
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 1.8s forwards;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-shadow: none;
 }
 
 .hero-visual {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    z-index: 1;
 }
 
 .product-showcase {
@@ -268,46 +242,45 @@ body {
     z-index: 3;
 }
 
-.product-image {
-    width: 300px;
-    height: auto;
-    filter: drop-shadow(0 20px 40px rgba(45, 138, 138, 0.3));
-    opacity: 0;
-    transform: scale(0.8) rotate(-10deg);
-    animation: productEntrance 1.5s ease-out 2s forwards;
+.product-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
 }
 
-@keyframes productEntrance {
-    to {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-    }
+.main-product-img {
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-color);
 }
 
-.floating-animation {
-    animation: productFloat 4s ease-in-out infinite;
+.sub-product-img {
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes productFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(2deg); }
+.main-product-img {
+    border: 2px solid var(--primary-color);
 }
 
-.glow-effect {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(45, 138, 138, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: glowPulse 3s ease-in-out infinite;
+.sub-img-1,
+.sub-img-2 {
+    position: static;
+    transform: none;
+    animation: none;
 }
 
-@keyframes glowPulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
-    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; }
+.product-glow {
+    display: none;
 }
 
 .lady-visual {
@@ -343,45 +316,42 @@ body {
 .cta-button {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 16px 32px;
+    gap: 10px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--primary-color);
     border: none;
     border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: var(--primary-dark);
+}
+
+.cta-button i {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateX(5px);
 }
 
 .primary-cta {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 2s forwards;
-}
-
-.primary-cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.6s;
-}
-
-.primary-cta:hover::before {
-    left: 100%;
+    font-size: 1.2rem;
+    padding: 1.2rem 2.5rem;
 }
 
 .primary-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(45, 138, 138, 0.4);
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
 }
 
 .scroll-indicator {
@@ -520,11 +490,13 @@ body {
     position: absolute;
     top: 20px;
     right: 30px;
-    font-size: 8rem;
+    font-size: 4rem;
     font-weight: 900;
-    color: var(--secondary-color);
-    opacity: 0.15;
-    z-index: 1;
+    color: #1A5A5A;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    line-height: 1;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .concept-card h3 {
@@ -577,64 +549,47 @@ body {
 
 /* Product Section */
 .product-section {
-    padding: 120px 20px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 100px 0;
+    background: var(--background-light);
     position: relative;
     overflow: hidden;
-}
-
-.product-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 80%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(45, 138, 138, 0.05) 0%, transparent 70%);
-    transform: rotate(15deg);
 }
 
 .product-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    padding: 0 20px;
+    display: flex;
     align-items: center;
+    gap: 60px;
+}
+
+.product-info {
+    flex: 1;
     position: relative;
     z-index: 2;
 }
 
-.product-info {
-    transform: translateX(-50px);
-    opacity: 0;
-    animation: slideInLeft 1s ease-out forwards;
-}
-
 .product-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--gold-accent), var(--secondary-color));
+    padding: 8px 16px;
+    background: var(--primary-color);
     color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .product-title {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .product-name {
     display: block;
-    font-size: 3rem;
-    font-weight: 900;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
     margin-bottom: 10px;
 }
 
@@ -642,39 +597,28 @@ body {
     display: block;
     font-size: 1.2rem;
     color: var(--text-light);
-    font-weight: 400;
 }
 
 .product-features {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .feature-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 15px;
-    padding: 12px 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
 }
 
 .feature-item i {
     color: var(--primary-color);
     font-size: 1.2rem;
-    width: 20px;
-}
-
-.feature-item span {
-    font-size: 1rem;
-    color: var(--text-dark);
-    font-weight: 500;
 }
 
 .product-price {
-    margin-bottom: 40px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
-    border: 2px solid var(--secondary-color);
+    margin-bottom: 30px;
 }
 
 .price-label {
@@ -685,9 +629,9 @@ body {
 }
 
 .price-amount {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
 .product-cta {
@@ -698,6 +642,7 @@ body {
 }
 
 .product-visual-container {
+    flex: 1;
     position: relative;
     display: flex;
     justify-content: center;
@@ -706,10 +651,13 @@ body {
 
 .product-images {
     position: relative;
+    width: 100%;
+    max-width: 500px;
 }
 
 .main-product-img {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
     z-index: 3;
     position: relative;
@@ -727,7 +675,7 @@ body {
     width: 120px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 10px 25px var(--shadow-medium);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -765,6 +713,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: productGlow 5s ease-in-out infinite;
+    z-index: 1;
 }
 
 @keyframes productGlow {
@@ -935,57 +884,58 @@ body {
 
 /* Benefits Section */
 .benefits-section {
-    padding: 120px 20px;
-    background: linear-gradient(135deg, var(--background-cream) 0%, var(--green-light) 100%);
+    padding: 100px 0;
+    background: var(--background-light);
     position: relative;
 }
 
 .benefits-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 60px;
+}
+
+.benefits-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
 }
 
 .benefits-wrapper {
-    margin-top: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .benefit-item {
     display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    transition: all 0.4s ease;
-    transform: translateX(-100px);
-    opacity: 0;
-}
-
-.benefit-item.animate {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.benefit-item:nth-child(even) {
-    flex-direction: row-reverse;
-    transform: translateX(100px);
-}
-
-.benefit-item:nth-child(even).animate {
-    transform: translateX(0);
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .benefit-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(45, 138, 138, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .benefit-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -994,20 +944,37 @@ body {
 }
 
 .benefit-icon i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
 }
 
 .benefit-content h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
     margin-bottom: 10px;
-    color: var(--primary-color);
 }
 
 .benefit-content p {
-    color: var(--text-light);
+    font-size: 1rem;
     line-height: 1.6;
+    color: var(--text-light);
+}
+
+.benefits-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 400px;
+}
+
+.benefit-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Company Section */
@@ -1316,12 +1283,24 @@ body {
     }
     
     .product-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 40px;
     }
     
-    .sub-product-img {
-        display: none;
+    .product-info {
+        text-align: center;
+    }
+    
+    .feature-item {
+        justify-content: center;
+    }
+    
+    .product-name {
+        font-size: 2rem;
+    }
+    
+    .product-visual {
+        max-width: 300px;
     }
     
     .cta-buttons {
@@ -1340,6 +1319,75 @@ body {
     
     .cta-visual {
         display: none;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .primary-cta {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+    }
+    
+    .concept-number {
+        font-size: 3rem;
+    }
+
+    .product-images {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-product-img {
+        width: 240px !important;
+        height: 240px !important;
+    }
+
+    .sub-product-img {
+        width: 240px !important;
+        height: 240px !important;
+    }
+
+    .sub-img-1,
+    .sub-img-2 {
+        position: static;
+        transform: none;
+        animation: none;
+    }
+
+    .product-glow {
+        display: none;
+    }
+
+    .benefits-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .benefits-images {
+        max-width: 100%;
+    }
+
+    .benefit-image {
+        height: 200px;
+    }
+
+    .benefit-item {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
     }
 }
 
@@ -1407,4 +1455,36 @@ body {
 .animate-on-scroll.animated {
     opacity: 1;
     transform: translateY(0);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-dark);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    color: #000000;
+    position: relative;
+    z-index: 100;
+    text-shadow: none;
+    mix-blend-mode: normal;
+    background: transparent;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 50;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
 } 
